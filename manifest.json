@@ -1,0 +1,39 @@
+{
+	"$schema": "./node_modules/@edgestation/sdk/manifest.schema.json",
+	"name": "Stock monitor",
+	"version": "1.0.0",
+	"description": "One stock, fund, index, crypto or currency, with prices from Yahoo Finance: a chart from 1 day to 5 years, the price of the day, or the day in detail. Pick the stock on the widget, and the view in its settings.",
+	"author": "ChainList",
+	"minAppVersion": "0.5.0",
+	"main": "dist/main.js",
+	"icon": "icon.svg",
+	"size": {
+		"w": 2,
+		"h": 1
+	},
+	"permissions": [
+		"fetch"
+	],
+	"settings": [
+		{
+			"key": "show",
+			"label": "Show",
+			"type": "select",
+			"default": "chart",
+			"options": [
+				{
+					"value": "chart",
+					"label": "Chart"
+				},
+				{
+					"value": "price",
+					"label": "Price of the day"
+				},
+				{
+					"value": "details",
+					"label": "Day in detail"
+				}
+			]
+		}
+	]
+}
